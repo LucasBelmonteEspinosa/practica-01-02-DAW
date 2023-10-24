@@ -8,15 +8,15 @@ set -x
 echo "Esto es un texto"
 
 # Actualizamos la lista de repositorios
-#apt update
+apt update
 
 # Actualizamos los paquetes del sistema
 
-#apt upgrade
+apt upgrade -y
 
 # Instalamos el servidor web Apache
 
-#apt install apache2 -y
+apt install apache2 -y
 
 
 # Instalamos mysql Server
@@ -32,10 +32,6 @@ cp ../conf/000-default.conf /etc/apache2/sites-available
 
 # Reiniciamos el servicio de Apache
 systemctl restart apache2
-
-# Copiamos el archivo de prueba PHP
-
-cp ../php/index.php /var/www/html
 
 # Cambiamos el usuario y el propietario del directorio /var/www/html
 
